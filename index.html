@@ -15,19 +15,23 @@
       </header>
 
       <main>
-        <form id="workout-plan-generator-form">
-          <input
-            type="text"
-            placeholder="Enter the type of workout you prefer"
-            autofocus
-            required
-            autocomplete="off"
-            class="instructions"
-            id="user-instructions"
-          />
-          <input type="submit" class="button" />
-        </form>
-        <div class="plan" id="plan"></div>
+        <div class="form-container">
+          <form id="workout-plan-generator-form">
+            <input
+              type="text"
+              placeholder="Enter the type of workout you'd like to generate"
+              autofocus
+              required
+              autocomplete="off"
+              class="instructions"
+              id="user-instructions"
+            />
+            <input type="submit" class="button" />
+          </form>
+          <div class="hint">i.e.: cardio, upper body, glutes...</div>
+        </div>
+
+        <div class="plan hidden" id="plan"></div>
       </main>
 
       <footer>

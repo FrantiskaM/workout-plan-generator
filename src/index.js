@@ -17,6 +17,10 @@ function generatePlan(event) {
     "You are a fitness Plan expert and you love to plan workout sessions. Your mission is to generate a plan basic HTML. Make sure to follow the user instructions. Sign the plan with 'Created by SheCodes AI' writed in cursive and bold";
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+  let planElement = document.querySelector("#plan");
+  planElement.classList.remove("hidden");
+  planElement.innerHTML = `<div class="generating">⏳ Generating the ${instructionsInput.value} workout plan for you...</div>`;
+
   console.log("Generating plan");
   console.log(`Prompt: ${prompt}`);
   console.log(`Context: ${context}`);
